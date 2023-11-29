@@ -90,12 +90,12 @@ const HIDConnector = () => {
 
       }
 
-      if (!connected) {
-        console.log("failed to connect to any device");
-      }
-
     } catch (error) {
       console.error("An error occurred: ", error);
+    }
+
+    if (!connected) {
+      console.error("failed to connect to any device");
     }
   };
 
