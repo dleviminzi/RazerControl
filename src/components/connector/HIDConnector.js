@@ -58,10 +58,11 @@ const HIDConnector = () => {
         filters: acceptableDevices,
       });
       if (devices.length === 0) {
-        console.log("could not find device")
+        console.log("could not find device");
         return;
       }
 
+      console.log(devices);
       for (const i in devices) {
         if (
           devices[i].collections.length === 1 &&
