@@ -58,6 +58,7 @@ const HIDConnector = () => {
         filters: acceptableDevices,
       });
       if (devices.length === 0) {
+        console.log("could not find device")
         return;
       }
 
@@ -76,6 +77,11 @@ const HIDConnector = () => {
           break;
         }
       }
+
+      if (!connected) {
+        console.log("failed to connect to any device");
+      }
+
     } catch (error) {
       console.error("An error occurred: ", error);
     }
